@@ -6,3 +6,4 @@ static
 templates
 *.cfg
 .idea
+.ipynb_checkpoints
