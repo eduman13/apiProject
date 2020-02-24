@@ -34,7 +34,3 @@ def analysisMessages(messages, function):
     if function == "messages":
         sentimientos = sia.polarity_scores(messages)
         return sentimientos
-
-
-
-

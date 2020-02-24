@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+import os
 import userBl
 import chatBl
 
@@ -24,7 +25,7 @@ def createChat():
 
 @app.route("/chat/<chat_id>/adduser")
 def addUser(chat_id):
-    user_id = request.args.get("user_id")
+    user_id = request.args.get("userr_id")
     return {
         "chat_id": chatBl.addUser(chat_id, user_id)
     }
@@ -67,4 +68,4 @@ def handleException(e):
     }, 400
 
 if __name__ == '__main__':
-    app.run()
+    app.run("0.0.0.0", os.getenv("PORT"))

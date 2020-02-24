@@ -1,9 +1,8 @@
-from pymongo import MongoClient
 import commons as com
 import error
+from config import db
 
-client = MongoClient("mongodb://localhost/apiProject")
-db = client.get_database()
+db = db
 
 def existsByUserName(username):
     query = {"userName": username}

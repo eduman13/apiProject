@@ -86,5 +86,3 @@ def recomendationSystem(stats, message):
                             index=data.index)
     distance = 1 / (1 + distance)
     return distance["newUser"].sort_values(ascending=False)[1:].head(3).index.tolist()
-
-

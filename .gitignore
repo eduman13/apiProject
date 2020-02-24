@@ -7,3 +7,6 @@ templates
 *.cfg
 .idea
 .ipynb_checkpoints
+.env
+.dockerignore
+Dockerfile

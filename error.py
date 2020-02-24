@@ -9,4 +9,3 @@ class NoExistUser(Exception):
 class NoExistChat(Exception):
     def __init__(self):
         Exception.__init__(self, "El chat no existe")
-

@@ -1,11 +1,10 @@
-from pymongo import MongoClient
 import datetime
 import commons as com
 import userDl
 import error
+from config import db
 
-client = MongoClient("mongodb://localhost/apiProject")
-db = client.get_database()
+db = db
 
 def existsChatById(chat_id):
     query = {"chat_id": chat_id}
